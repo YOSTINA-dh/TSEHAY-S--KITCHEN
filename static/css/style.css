@@ -124,7 +124,7 @@ main {
 /*Feedback form with succes and error messages*/
 
 #modal1 {
-	background-color: #00766B;
+	background-color: #d69497;
 	color: #f0f8ff;
 	width: 40%;
 	height: 60%;
@@ -134,7 +134,7 @@ main {
 #modal2,
 #modal3 {
 	display: none;
-	background-color: #00766B;
+	background-color: #d69497;
 	color: #f0f8ff;
 	width: 40%;
 	height: 20%;
@@ -147,7 +147,7 @@ main {
 
 .feedback_button {
 	background: #f0f8ff;
-	color: #00766B;
+	color: #d69497;
 }
 
 
