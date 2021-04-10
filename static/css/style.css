@@ -23,7 +23,7 @@ main {
 }
 
 #home {
-	color: #00766B;
+	color: #d69497;
 	padding-bottom: 6.25rem;
 	min-height: 100vh;
 }
@@ -37,7 +37,8 @@ main {
 }
 
 .nav-wrapper {
-	background-color: #00766B;
+	background-color: #d69497;
+
 }
 
 #search {
@@ -64,12 +65,12 @@ main {
 }
 
 .card-title {
-	color: #00766B;
+	color: #d69497;
 	padding-top: 1.3rem;
 }
 
 .card {
-	border: #00766B solid 0.5rem;
+	border: #d69497 solid 0.5rem;
 	border-radius: 0.5rem;
 	height: 40rem;
 }
@@ -95,11 +96,11 @@ main {
 /*Add new recipes title and submit button */
 
 #addnew {
-	color: #00766B;
+	color: #d69497;
 }
 
 #submit {
-	background-color: #00766B;
+	background-color: #d69497;
 	color: #f0f8ff;
 	position: relative;
 }
@@ -108,7 +109,7 @@ main {
 /*Footer and footer's content */
 
 .page-footer {
-	background-color: #00766B;
+	background-color: #d69497;
 	color: #f0f8ff;
 	margin-bottom: 0;
 }
