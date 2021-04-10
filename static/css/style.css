@@ -1,0 +1,204 @@
+/*Roboto Slab Google Font imported */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+/*Main styling with font, default color and font color */
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	font-family: 'Roboto Slab', serif;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+
+/*Homepage settings (logo, info card, search bar) */
+
+#logo {
+	height: 6.25rem;
+}
+
+#home {
+	color: #00766B;
+	padding-bottom: 6.25rem;
+	min-height: 100vh;
+}
+
+#home_card {
+	height: 40%;
+}
+
+#info {
+	font-size: 1.2rem;
+}
+
+.nav-wrapper {
+	background-color: #00766B;
+}
+
+#search {
+	top: -0.7rem;
+}
+
+
+/*Stick footer to the bottom*/
+
+.results,
+.categories,
+.addrecipes,
+.recipe_one {
+	min-height: 100vh;
+}
+
+
+/*Recipe cards styling*/
+
+#search_recipes{
+    padding-bottom:3.5rem;
+    padding-top:3.5rem;
+
+}
+
+.card-title {
+	color: #00766B;
+	padding-top: 1.3rem;
+}
+
+.card {
+	border: #00766B solid 0.5rem;
+	border-radius: 0.5rem;
+	height: 40rem;
+}
+
+.card-image {
+    max-height:15rem;
+}
+
+.category-header {
+	font-size: 1.5rem;
+}
+
+.page-category,
+.category-name {
+	font-size: 1.5rem;
+}
+
+#delete {
+	background: #ff0000;
+}
+
+
+/*Add new recipes title and submit button */
+
+#addnew {
+	color: #00766B;
+}
+
+#submit {
+	background-color: #00766B;
+	color: #f0f8ff;
+	position: relative;
+}
+
+
+/*Footer and footer's content */
+
+.page-footer {
+	background-color: #00766B;
+	color: #f0f8ff;
+	margin-bottom: 0;
+}
+
+#btn-footer,
+#btn-footer2 {
+	padding-right: 3%;
+	color: #f0f8ff;
+}
+
+
+/*Feedback form with succes and error messages*/
+
+#modal1 {
+	background-color: #00766B;
+	color: #f0f8ff;
+	width: 40%;
+	height: 60%;
+	text-align: center;
+}
+
+#modal2,
+#modal3 {
+	display: none;
+	background-color: #00766B;
+	color: #f0f8ff;
+	width: 40%;
+	height: 20%;
+	text-align: center;
+}
+
+#modal3 {
+	height: 30%;
+}
+
+.feedback_button {
+	background: #f0f8ff;
+	color: #00766B;
+}
+
+
+/*==================================================
+=                Media Queries             =
+==================================================*/
+
+
+/*** Small mobile devices ***/
+
+
+/*** Tested on Moto G4, Galaxy S5, Pixel2, Pixel 2XL, Iphone 5/SE, Iphone 6/7/8, IphoneX, Iphone 6/7/8 Plus, IphoneX, Ipad and Ipad Pro ***/
+
+@media only screen and (min-width: 310px) and (max-width: 769px) {
+	#recipecard {
+		height: 45rem;
+	}
+	#imagerecipe {
+        max-height:15rem;
+    }
+	#titlerecipe {
+		padding-top: 16rem;
+	}
+}
+
+
+/***Tested on  Ipad and Ipad Pro ***/
+
+@media screen and (min-width: 770px) and (max-width: 1023px) {
+	#recipecard {
+		height: 40.5rem;
+	}
+	#imagerecipe {
+        max-height:6rem;
+	}
+	#titlerecipe {
+		padding-top: 15rem;
+	}
+}
+
+
+/***Tested on laptop, laptop with touch ***/
+
+@media screen and (min-width: 1024px) {
+	#recipecard {
+		height: 42.3rem;
+	}
+	#titlerecipe {
+		font-size: 1.3rem;
+        padding-top: 3rem;
+	}
+    #imagerecipe {
+        max-height:17rem;
+	}
+}

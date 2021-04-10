@@ -3,51 +3,47 @@
 <!--Block title to achieve different titles on different pages-->
 <title> {% block title %}Homepage{% endblock %} </title>
 <!--Homepage, where the user land when they open the app
-       They user can see a small explanation about the structure of the page, can search for recipes or can browse recipes-->
+   They user can see a small explanation about the structure of the page, can search for recipes or can browse recipes-->
 <div class="container center" id="home">
-    <!--Lockdown Kitchen's Logo positioned to the center of the page-->
-    <img alt="logo" class="responsive-img" id="logo"
-        src="{{ url_for('static', filename='images/logo_transparent.png') }}">
-    <div class="row">
-        <div class="col s12 m12">
-            <h3 class="header"> Welcome to Tsehay's Kitchen </h3>
-            <!--Information about the page, and direct link to all recipes page-->
-            <div class="card" id="home_card">
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <span id="info">Lockdown Kitchen is an online cookbook, where You can find out how to make
-                            delicious food without looking for ingredients all over the city. For these yummies You need
-                            just a couple of ingredients, so leave the big shopping after the lockdown! If you have a
-                            good recipe, share with us: You can add, edit and even delete recipes. <br> Enjoy! </span>
-                    </div>
-                    <div class="card-action">
-                        <a href="{{url_for('get_recipes')}}">Show me the recipes</a>
-                    </div>
-                </div>
+   <!--Lockdown Kitchen's Logo positioned to the center of the page-->
+   <img alt="logo" class="responsive-img" id="logo" src="{{ url_for('static', filename='images/logo_transparent.png') }}">
+   <div class="row">
+      <div class="col s12 m12">
+         <h3 class="header"> Welcome to Lockdown Kitchen! </h3>
+         <!--Information about the page, and direct link to all recipes page-->
+         <div class="card" id="home_card">
+            <div class="card-stacked">
+               <div class="card-content">
+                  <span id="info">Lockdown Kitchen is an online cookbook, where You can find out how to make delicious food without looking for ingredients all over the city. For these yummies You need just a couple of ingredients, so leave the big shopping after the lockdown! If you have a good recipe, share with us: You can add, edit and even delete recipes. <br> Enjoy! </span>
+               </div>
+               <div class="card-action">
+                  <a href="{{url_for('get_recipes')}}">Show me the recipes</a>
+               </div>
             </div>
-        </div>
-    </div>
-    <!--Search bar with a submit button-->
-    <h5> What do you have at home? </h5>
-    <div class="row">
-        <div class="searchbar col m12 s12">
-            <nav>
-                <div class="nav-wrapper">
-                    <form action="{{url_for('find_recipes')}}">
-                        <div class="input-field">
-                            <input id="search0" type="search" name="search" required>
-                            <label class="label-icon" for="search" id="search">
-                                <i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                        <div id="search_btn">
-                            <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Search
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </nav>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
+   <!--Search bar with a submit button-->
+   <h5> What do you have at home? </h5>
+   <div class="row">
+      <div class="searchbar col m12 s12">
+         <nav>
+            <div class="nav-wrapper">
+               <form action="{{url_for('find_recipes')}}">
+                  <div class="input-field">
+                     <input id="search0" type="search" name="search" required>
+                     <label class="label-icon" for="search" id="search">
+                     <i class="material-icons">search</i></label>
+                     <i class="material-icons">close</i>
+                  </div>
+                  <div id="search_btn">
+                     <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Search
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+   </div>
 </div>
 {% endblock %}
