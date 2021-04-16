@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Wine List</title>
-</head>
+   <h2>I'm extending the base template!</h2>
 
-<body>
-    {% for list in lists %}
+  {% for list in lists %}
     {{ list.list_name }}<br>
     {{ list.category_name }}<br>
     {{ list.list_description }}<br>
     {{ list.vintage_date }}<br>
-    {% endfor %}
-</body>
+ {% endfor %}
 
-</html>
+{% endblock %}
