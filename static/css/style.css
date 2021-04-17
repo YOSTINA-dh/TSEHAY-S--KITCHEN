@@ -2,61 +2,8 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-  
-
-
-
-
-    /*==================================================
-=                Media Queries             =
-==================================================*/
-
-
-/*** Small mobile devices ***/
-
-
-/*** Tested on Moto G4, Galaxy S5, Pixel2, Pixel 2XL, Iphone 5/SE, Iphone 6/7/8, IphoneX, Iphone 6/7/8 Plus, IphoneX, Ipad and Ipad Pro ***/
-
-@media only screen and (min-width: 310px) and (max-width: 769px) {
-	#recipecard {
-		height: 45rem;
-	}
-	#imagerecipe {
-        max-height:15rem;
-    }
-	#titlerecipe {
-		padding-top: 16rem;
-	}
+.flashes h4 {
+    line-height: 2;
 }
-
-
-/***Tested on  Ipad and Ipad Pro ***/
-
-@media screen and (min-width: 770px) and (max-width: 1023px) {
-	#recipecard {
-		height: 40.5rem;
-	}
-	#imagerecipe {
-        max-height:6rem;
-	}
-	#titlerecipe {
-		padding-top: 15rem;
-	}
-}
-
-
-/***Tested on laptop, laptop with touch ***/
-
-@media screen and (min-width: 1024px) {
-	#recipecard {
-		height: 42.3rem;
-	}
-	#titlerecipe {
-		font-size: 1.3rem;
-        padding-top: 3rem;
-	}
-    #imagerecipe {
-        max-height:17rem;
-	}
-}
+ 
     
