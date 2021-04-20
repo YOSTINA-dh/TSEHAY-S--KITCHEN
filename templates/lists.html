@@ -1,22 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class=" teal-text center-align">All Lists</h3>
+<h3 class=" teal-text center-align">All Lists</h3>
 
-    <ul class="collapsible popout">
-        {% for list in lists %}
-        <li>
-            <div class="collapsible-header teal-text teal lighten-4 ">
+<ul class="collapsible popout">
+    {% for list in lists %}
+    <li>
+        <div class="collapsible-header teal-text teal lighten-4 ">
+            <div class="col s3">
                 <i class="fas fa-wine-bottle"></i>
-                <strong>{{ list.list_name }}</strong> : {{ list.vintate_date }}
+                <a href="" class="btn-small green accent-4">Done</a>
+                <a href="" class="btn-small light-blue lighten-1">Edit</a>
             </div>
-            <div class="collapsible-body">
-                <strong>{{ list.category_name }}</strong>
-                <p>{{ list.list_description }}</p>
-                <p><em>by: {{ list.created_by }}</em></p>
+            <div class="col s9">
+                <strong>{{ list.list_name }}</strong> : {{ list.vintage_year }}
             </div>
-        </li>
-        {% endfor %}
-    </ul>
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ list.category_name }}</strong>
+            <p>{{ list.list_description }}</p>
+            <p><em>by: {{ list.created_by }}</em></p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 
-    {% endblock %}
+{% endblock %}

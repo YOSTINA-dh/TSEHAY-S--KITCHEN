@@ -6,6 +6,15 @@
     line-height: 2;
 }
 
+.btn-small {
+    margin: 5px;
+}
+
+.collapsible-header .col strong {
+    margin: 5px;
+    line-height: 42px;
+}
+
 
 /*==================================================
 =                Media Queries             =
@@ -21,8 +30,7 @@ html {
 
 
 @media only screen and (max-width: 992px)
-.nav .brand-logo {
+ .brand-logo {
     left: 40%;
-
 }
  
