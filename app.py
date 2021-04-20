@@ -135,6 +135,13 @@ def edit_list(list_id):
     return render_template("edit_list.html", list=list, categories=categories)
 
 
+@app.route("/delete_list/<list_id>")
+def delete_list(list_id):
+    mongo.db.lists.remove({"_id": ObjectId(list_id)})
+    flash("List Successfully Deleted")
+    return redirect(url_for("get_lists"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
