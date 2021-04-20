@@ -117,8 +117,19 @@ def add_list():
     return render_template("add_list.html", categories=categories)
 
 
-@app.route("/edit_lis/<list_id>", methods=["GET", "POST"])
+@app.route("/edit_list/<list_id>", methods=["GET", "POST"])
 def edit_list(list_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "list_name": request.form.get("list_name"),
+            "list_description": request.form.get("list_description"),
+            "vintate_date": request.form.get("vintate_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.lists.update({"_id": ObjectId(list_id)}, submit)
+        flash("List Successfully Updated")
+
     list = mongo.db.lists.find_one({"_id": ObjectId(list_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_list.html", list=list, categories=categories)
