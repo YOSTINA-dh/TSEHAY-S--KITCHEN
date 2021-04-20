@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class=" teal-text center-align">All Lists</h3>
+
     <ul class="collapsible popout">
         {% for list in lists %}
         <li>
-            <div class="collapsible-header black-text teal lighten-4 text-shadow">
+            <div class="collapsible-header teal-text teal lighten-4 ">
                 <i class="fas fa-wine-bottle"></i>
-                <strong>{{ list.list_name }}</strong> : {{ list.list_description }}
+                <strong>{{ list.list_name }}</strong> : {{ list.vintate_date }}
             </div>
             <div class="collapsible-body">
                 <strong>{{ list.category_name }}</strong>
                 <p>{{ list.list_description }}</p>
+                <p><em>by: {{ list.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
     </ul>
 
-{% endblock %}
+    {% endblock %}

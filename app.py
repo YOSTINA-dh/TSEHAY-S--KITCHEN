@@ -99,8 +99,20 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_list")
+@app.route("/add_list", methods=["GET", "POST"])
 def add_list():
+    if request.method == "POST":
+        list = {
+            "category_name": request.form.get("category_name"),
+            "list_name": request.form.get("list_name"),
+            "list_description": request.form.get("list_description"),
+            "vintage_date": request.form.get("vintage_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.lists.insert_one(list)
+        flash("New list Successfully Added")
+        return redirect(url_for("get_lists"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_list.html", categories=categories)
 
