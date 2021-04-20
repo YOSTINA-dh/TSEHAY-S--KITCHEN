@@ -3,13 +3,16 @@
 */
 
 $(document).ready(function () {
-    $(".sidenav").sidenav({edge: "left"});
-    $(".collapsible").collapsible();
+  $(".sidenav").sidenav({ edge: "left" });
+  $(".collapsible").collapsible();
+  $(".datepicker").datepicker({
+    format: "yyyy",
+    showClearBtn: true,
+    i18n: {
+      done: "Select",
+    },
+  });
 });
-
-
-
-
 
 /*
     vanilla JavaScript for MaterializeCSS initialization
