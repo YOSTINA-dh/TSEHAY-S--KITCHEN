@@ -1,50 +1,66 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class=" teal-text center-align">Edit list</h3>
+<h3 class="teal-text center-align">Edit list</h3>
 
 <div class="row card-panel green lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('edit_list', list_id=list._id) }}">
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
-                <input id="task_name" name="task_name" minlength="5" maxlength="50" type="text" class="validate"
-                    required>
-                <label for="wine_name">Wine Name</label>
-            </div>
-        </div>
+        <!-- category selection -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix teal-text text-teal darken-4"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Choose Category</option>
+                    <option value="" disabled>Choose Category</option>
                     {% for category in categories %}
+                    {% if category.category_name == list.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
-                <label for="category_name">List categoryy</label>
+                <label for="category_name">List Category</label>
             </div>
         </div>
+        <!-- task name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix teal-text text-teal darken-4"></i>
-                <textarea id="task_description" name="task_description" minlength="5" maxlength="600"
-                    class="materialize-textarea validate" required></textarea>
-                <label for="task_description">Product Description</label>
+                <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
+                <input id="list_name" name="list_name" minlength="5" maxlength="50" value="{{ list.list_name }}"
+                    type="text" class="validate" required>
+                <label for="list_name">Wine Name</label>
             </div>
         </div>
+        <!-- task description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix teal-text text-teal darken-4"></i>
-                <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
+                <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required>
+                        {{- list.list_description -}} 
+                    </textarea>
+                <label for="list_description">Product Description</label>
+            </div>
+        </div>
+        <!-- due date picker -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
+                <input id="Vintage_Year" name="Vintage_Year" type="text" value="{{ list.Vintage_Year}}"
+                    class="datepicker validate" required>
                 <label for="due_date">Vintage_Year</label>
             </div>
         </div>
-           <!-- submit button -->
+
+        <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn waves-effect waves-light text-teal darken-4 text-shadow">
-                    Edit list <i class="fas fa-edit right"></i>
+                <!-- cancel button -->
+                <a href="{{ url_for('get_lists') }}" class="btn-large red text-shadow">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
+                <button type="submit" class="btn-large teal lighten-2 text-shadow">
+                    Edit List <i class="fas fa-edit right"></i>
                 </button>
             </div>
         </div>
