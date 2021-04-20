@@ -117,6 +117,13 @@ def add_list():
     return render_template("add_list.html", categories=categories)
 
 
+@app.route("/edit_lis/<list_id>", methods=["GET", "POST"])
+def edit_list(list_id):
+    list = mongo.db.lists.find_one({"_id": ObjectId(list_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_list.html", list=list, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
