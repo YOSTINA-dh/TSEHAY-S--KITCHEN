@@ -101,7 +101,8 @@ def logout():
 
 @app.route("/add_list")
 def add_list():
-    return render_template("add_list.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_list.html", categories=categories)
 
 
 if __name__ == "__main__":

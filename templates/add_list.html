@@ -8,28 +8,42 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
-                <input id="wine_name" name="wine_name" minlength="5" maxlength="50"
-                type="text" class="validate" required>
+                <input id="wine_name" name="wine_name" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
                 <label for="wine_name">Wine Name</label>
             </div>
-            <div class="input-field col s12">
-                <i class="fas fa-globe prefix teal-text text-teal darken-4"></i>
-                <input id="icon_Country" type="tel" class="validate">
-                <label for="icon_Country">Producing Country</label>
-            </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix teal-text text-teal darken-4"></i>
-                    <textarea id="wine_description" name="wine_description" minlength="5"
-                        maxlength="1000" class="materialize-textarea validate" required></textarea>
-                    <label for="wine_description">Product Description</label>
+                    <i class="fas fa-folder-open prefix teal-text text-teal darken-4"></i>
+                    <!--For loop to render categories, so the user can choose from them-->
+                    <select id="category" name="category_name">
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for list in categories %}
+                        <option value="{{list.category_name}}">{{list.category_name}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>List category</label>
                 </div>
-            </div>
             <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix  teal-text text-teal darken-4"></i>
-                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
-                    <label for="due_date">Vintage_Year</label>
+                    <div class="input-field col s12">
+                        <i class="fas fa-pencil-alt prefix teal-text text-teal darken-4"></i>
+                        <textarea id="wine_description" name="wine_description" minlength="5" maxlength="1000"
+                            class="materialize-textarea validate" required></textarea>
+                        <label for="wine_description">Product Description</label>
+                    </div>
+                </div>
+            <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-calendar-alt prefix  teal-text text-teal darken-4"></i>
+                        <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                        <label for="due_date">Vintage_Year</label>
+                    </div>
+                </div>
+                <!-- Submit button to insert the new recipe, and get redirected to the get_recipes page -->
+            <div class="submit center-align">
+                    <button type="submit" class="btn btn-success">
+                        <i class="icon-circle-arrow-right icon-large"></i> Submit
+                    </button>
                 </div>
             </div>
         </div>
