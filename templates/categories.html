@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="teal-text text-shadow center-align">Manage Categories</h3>
+<div class="row">
+    {% for category in categories %}
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator"
+                    src="https://cb.scene7.com/is/image/Crate/11BottleWineRackGoldSHF17/$web_pdp_main_carousel_zoom_low$/190411134606/11-bottle-wine-rack-gold.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator teal-text text-darken-4">{{ category.category_name }}<i
+                        class="fas fa-ellipsis-v right"></i></span>
+                <p><a href="{{ category.category_url }}" target="_blank" class="teal-text text-shadow">Learn More!</a>
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn amber lighten-2 ">Edit</a>
+                <a href="#" class="btn orange lighten-2 ">Delete</a>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{ category.category_name }}<i
+                        class="fas fa-window-close right"></i></span>
+                <p>{{ category.category_description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

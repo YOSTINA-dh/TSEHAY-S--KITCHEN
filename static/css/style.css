@@ -14,6 +14,16 @@
   margin: 5px;
   line-height: 42px;
 }
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  border: #e0c274 solid 0.2rem;
+  border-radius: 0.5rem;
+  height: 40rem;
+}
 
 /*==================================================
 =                Media Queries             =
