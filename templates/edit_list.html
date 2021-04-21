@@ -3,6 +3,7 @@
 
 <h3 class="teal-text center-align">Edit list</h3>
 
+
 <div class="row card-panel green lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('edit_list', list_id=list._id) }}">
         <!-- category selection -->
@@ -19,7 +20,7 @@
                     {% endif %}
                     {% endfor %}
                 </select>
-                <label for="category_name">List Category</label>
+                <label for="category_name">Wine Category</label>
             </div>
         </div>
         <!-- task name -->
@@ -34,24 +35,23 @@
         <!-- task description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
-                <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
+                <i class="fas fa-align-left prefix teal-text text-teal darken-4"></i>
+                <textarea id="list_description" name="list_description" minlength="5" maxlength="1000"
                     class="materialize-textarea validate" required>
-                        {{- list.list_description -}} 
+                        {{- list.list_description -}}
                     </textarea>
-                <label for="list_description">Product Description</label>
+                <label for="task_description">Product Description</label>
             </div>
         </div>
         <!-- due date picker -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-wine-bottle prefix teal-text text-teal darken-4"></i>
-                <input id="Vintage_Year" name="Vintage_Year" type="text" value="{{ list.Vintage_Year}}"
+                <i class="fas fa-calendar-alt prefix teal-text text-teal darken-4"></i>
+                <input id="Vintage_Year" name="vintage_Year" type="text" value="{{ list.vintage_Year }}"
                     class="datepicker validate" required>
-                <label for="due_date">Vintage_Year</label>
+                <label for="vintage_Year">Vintage_Year</label>
             </div>
         </div>
-
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
@@ -59,8 +59,8 @@
                 <a href="{{ url_for('get_lists') }}" class="btn-large red text-shadow">
                     Cancel <i class="fas fa-times-circle right"></i>
                 </a>
-                <button type="submit" class="btn-large teal lighten-2 text-shadow">
-                    Edit List <i class="fas fa-edit right"></i>
+                <button type="submit" class="btn-large teal-lighten-2 text-shadow">
+                    Edit list <i class="fas fa-edit right"></i>
                 </button>
             </div>
         </div>

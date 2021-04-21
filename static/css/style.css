@@ -1,36 +1,75 @@
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .flashes h4 {
-    line-height: 2;
+  line-height: 2;
 }
 
 .btn-small {
-    margin: 5px;
+  margin: 5px;
 }
 
 .collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
+  margin: 5px;
+  line-height: 42px;
 }
-
 
 /*==================================================
 =                Media Queries             =
 ==================================================*/
- 
 
-@media only screen and (min-width: 0)
-html {
-    font-size: 12px;
+@media only screen and (min-width: 0) html {
+  font-size: 12px;
 }
-    
+
+*==================================================
+=                Media Queries             =
+==================================================*/
 
 
+/*** Small mobile devices ***/
 
-@media only screen and (max-width: 992px)
- .brand-logo {
-    left: 40%;
+
+/*** Tested on Moto G4, Galaxy S5, Pixel2, Pixel 2XL, Iphone 5/SE, Iphone 6/7/8, IphoneX, Iphone 6/7/8 Plus, IphoneX, Ipad and Ipad Pro ***/
+
+@media only screen and (min-width: 310px) and (max-width: 769px) {
+  #listcard {
+    height: 45rem;
+  }
+  #imagelist {
+    max-height: 15rem;
+  }
+  #titlelist {
+    padding-top: 16rem;
+  }
 }
- 
+
+/***Tested on  Ipad and Ipad Pro ***/
+
+@media screen and (min-width: 770px) and (max-width: 1023px) {
+  #listcard {
+    height: 40.5rem;
+  }
+  #imagelist {
+    max-height: 6rem;
+  }
+  #titlelist {
+    padding-top: 15rem;
+  }
+}
+
+/***Tested on laptop, laptop with touch ***/
+
+@media screen and (min-width: 1024px) {
+  #listcard {
+    height: 42.3rem;
+  }
+  #titlelist {
+    font-size: 1.3rem;
+    padding-top: 3rem;
+  }
+  #imagelist {
+    max-height: 17rem;
+  }
+}
