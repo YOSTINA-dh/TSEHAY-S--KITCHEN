@@ -9,10 +9,11 @@
         crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Wine Enthusiast</title>
+    <title class="tittle">Wine Bar</title>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <!-- top navbar -->
         <nav class="nav-extended text-shadow teal lighten-2">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_lists') }}" class="brand-logo">Wine Enthusiast</a>
+                <a href="{{ url_for('get_lists') }}" class="brand-logo">Wine Bar</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_lists') }}">Home</a></li>
