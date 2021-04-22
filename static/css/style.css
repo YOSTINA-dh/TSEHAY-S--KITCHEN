@@ -32,6 +32,23 @@
   margin: .82rem 0 .656rem 0;
 }
 
+
+/*-----footer------*/
+
+.footer {
+  background-color: #c4e9e5;
+  text-align: center;
+  color: rgb(12, 19, 14);
+}
+
+a {
+  background-color: #c4e9e5;
+  text-align: center;
+  color: rgb(60, 240, 150);
+  background-color: transparent;
+  text-decoration: none;
+}
+
 /*==================================================
 =                Media Queries             =
 ==================================================*/
