@@ -25,6 +25,13 @@ def get_lists():
     return render_template("lists.html", lists=lists)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    lists = list(mongo.db.lists.find({"$text": {"$search": query}}))
+    return render_template("lists.html", lists=lists)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

@@ -32,7 +32,24 @@
 @media only screen and (min-width: 0) html {
   font-size: 12px;
 }
+@media only screen and (min-width: 0)
+html {
+    font-size: 14px;
+}
 
+
+@media only screen and (max-width: 992px)
+nav .brand-logo {
+    left: 40%;
+    
+}
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.0rem;
+    padding: 0;
+}
 *==================================================
 =                Media Queries             =
 ==================================================*/
@@ -83,3 +100,10 @@
     max-height: 17rem;
   }
 }
+
+
+@media only screen and (max-width: 992px)
+a.brand-logo {
+    left: 40%;
+}
+   
