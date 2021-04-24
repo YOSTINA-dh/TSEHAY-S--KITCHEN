@@ -68,15 +68,7 @@ a {
   text-decoration: none;
 }
 
-/*==================================================
-=                Media Queries             =
-==================================================*/
 
-
-/*** Small mobile devices ***/
-
-
-/*** Tested on Moto G4, Galaxy S5, Pixel2, Pixel 2XL, Iphone 5/SE, Iphone 6/7/8, IphoneX, Iphone 6/7/8 Plus, IphoneX, Ipad and Ipad Pro ***/
 
 @media only screen and (min-width: 310px) and (max-width: 769px) {
   .html {
@@ -89,3 +81,36 @@ a {
 }
 }
 
+/*==================================================
+=                Media Queries             =
+==================================================*/
+
+
+/*** Small mobile devices ***/
+
+
+/*** Tested on Moto G4, Galaxy S5, Pixel2, Pixel 2XL, Iphone 5/SE, Iphone 6/7/8, IphoneX, Iphone 6/7/8 Plus, IphoneX, Ipad and Ipad Pro ***/
+
+@media only screen and (min-width: 310px) and (max-width: 769px) {
+	.html {
+    font-size: 14px;
+  }
+  .collapsible popout{
+  font-size: 14px;
+  width: auto;
+  }
+}
+
+
+/***Tested on  Ipad and Ipad Pro ***/
+
+@media screen and (min-width: 770px) and (max-width: 1023px) {
+	
+}
+
+
+/***Tested on laptop, laptop with touch ***/
+
+@media screen and (min-width: 1024px) {
+	
+}
