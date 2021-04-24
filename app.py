@@ -1,3 +1,4 @@
+# Import installed libraries and components to the Python file
 import os
 from flask import (
     Flask, flash, render_template,
@@ -16,6 +17,10 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+'''App's paths, functions helping to let the user "do CRUD":
+create, retrieve, update, and delete recipes
+Homepage with search bar,
+list of categories returned to provide the category menu'''
 
 
 @app.route("/")
@@ -27,6 +32,10 @@ def get_lists():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    '''Search for recipes with regex method,
+    results of the search returned with the for loop in lists.html
+    If there is no result,
+    the user can see a message and a link for the Add lists page'''
     query = request.form.get("query")
     lists = list(mongo.db.lists.find({"$text": {"$search": query}}))
     return render_template("lists.html", lists=lists)
@@ -157,6 +166,9 @@ def get_categories():
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    '''Add new category using a form, submiting it using POST method
+    When the category is succesfully added,
+    the user gets redirected to the list of manage category page'''
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name"),
@@ -194,4 +206,4 @@ def delete_category(category_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
