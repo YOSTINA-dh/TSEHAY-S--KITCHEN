@@ -184,7 +184,7 @@ The logo is positioned to the center of the homepage. The picture is responsive.
 When the user lands on the homepage, they can find a card with the description of the cookbook.
 At the bottom of the box you can find a link to access the list of the categorys. The link is tested, works without problem.
 
-#### Searchbar
+#### Search bar
 
 The user can search for lists  based on what do they have at home. The search is build with regex method.
 When the search was successfull, a list of categorys will load, when there are no results for the keyword, the user get redirected to an error page with two links:
@@ -195,7 +195,7 @@ When the search was successfull, a list of categorys will load, when there are n
 
 Links and search are tested, both working correctly.
 
-### All Recipes
+### All Lists/categorys
 
 This page contains a search bar to help the user to find what are they exactly looking for, and a list of all lists of the database. Lists are stored in cards with this structure:
 
@@ -410,7 +410,6 @@ The app's preview should be available.
 
 - [PyMongo](https://pymongo.readthedocs.io/en/stable/)
 
-- [PEP8](http://pep8online.com/)
 
 ## Credits
 
@@ -429,7 +428,7 @@ All text was written by me and the description of the wine product are from [WIN
 
 Special thanks to:
 
-- My famaily and my friends who suppoete me every time, espcially they helped a lot during this project.
+- My family and my friends who supported me every time, especially they helped a lot during this project.
 - Special thank you to the Code Institute student care team
 
 
