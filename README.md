@@ -236,18 +236,6 @@ When the modification is submitted, the category will be updated, and the user w
 
 2. When the user clicks on the Delete button, the selected recipe will be removed from the database, the page of All categories loads automatically
 
-### Browse by Category
-
-Contains a dropdown menu with the four categories:
-
-1. Main Course;
-
-2. Soup;
-
-3. Bites;
-
-4. Bread.
-
 Navigation works without problem, the sidenav pops up when the window get resized.
 
 ### Add New lists/Add Category 
